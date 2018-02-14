@@ -4,7 +4,7 @@ var inquirer = require("inquirer");
 var clear = require("clear");
 
 // Global Variables
-var currentWord, guessesRemaining, lettersRemaining, lettersGuessed;
+var currentWord, wordObject, guessesRemaining, lettersRemaining, lettersGuessed, trash;
 
 //Array of variables
 var wordBank = ["awkward", "bangpipes", "banjo", "bungler", "croquet", "crypt", "dwarves", "fervid", "fishhook", "gazebo",
@@ -20,5 +20,10 @@ var wordBank = ["awkward", "bangpipes", "banjo", "bungler", "croquet", "crypt", 
  }
 
  var generateWord = function() {
+wordObject = {};
+guessesRemaining = 10;
+var randomWord = Math.floor(Math.random() * wordBank.length);
+currentWord = wordBank[randomWord];
+wordObject = 
 
  }
