@@ -1,0 +1,24 @@
+{
+  "name": "Node_Hangman",
+  "version": "1.0.0",
+  "description": "Homework# 12 Advanced JavaScript Assignment: Constructor Hangman",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nalston2017/Node_Hangman.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nalston2017/Node_Hangman/issues"
+  },
+  "homepage": "https://github.com/nalston2017/Node_Hangman#readme",
+  "dependencies": {
+    "inquirer": "^5.1.0",
+    "save": "^2.3.2"
+  }
+}
