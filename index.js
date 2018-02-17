@@ -38,12 +38,37 @@ var guess = function() {
 
 if (lettersRemaining === 0) {
   if (remainingWords === 0){
-    // new game start
+    end();
   } else {
-    // next round
+    newGame();
   } else if (guessesRemaining === 0) {
-    // game over
-  } 
+    gameOver();
+  } else {
+    console.log(`Remaining Words: ${remainingWords}`);
+    console.log(`Remaining Words: ${remainingWords.join(" ")}`);
+    console.log(`Guesses Remaining: ${guessesRemaining}`);
+
+  wordObject.letterString();
+
+  inquirer.prompt([
+    {
+      type: "input",
+      message: "Please enter a guess: ",
+      name: "guess"
+    }
+  ]).then(function(response) {
+    var restrict = /^[a-z]+$/i;
+    if (response.guess.length === 1 && restrict.test(response.guess)) {
+      var currentGuess = response.guess.toLowerCase();
+      wordObject.guessLetter(currentGuess);
+      playerGuess();
+    }
+
+    var playerGuess = function() {
+      clear();
+    }
+  })
+  }
 }
 
 
